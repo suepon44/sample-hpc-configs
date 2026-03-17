@@ -1,5 +1,5 @@
 site_name: HPC インフラ構成ドキュメント
-site_url: https://<org>.github.io/hpc-infra-docs/
+site_url: https://suepon44.github.io/sample-hpc-configs/
 theme:
   name: material
   language: ja
@@ -28,7 +28,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_mermaid
+          format: !!python/name:pymdownx.superfences.fence_mermaid_custom
   - pymdownx.tabbed:
       alternate_style: true
   - admonition
