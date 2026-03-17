@@ -1,0 +1,80 @@
+site_name: HPC インフラ構成ドキュメント
+site_url: https://<org>.github.io/hpc-infra-docs/
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path          # パンくずリスト
+    - navigation.indexes       # カテゴリindexページ
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+plugins:
+  - search:
+      lang:
+        - ja
+        - en
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - toc:
+      permalink: true
+
+nav:
+  - ホーム: index.md
+  - ユーザーアクセス・認証・ポータル:
+    - user-access/index.md
+    - ユーザー登録フロー: user-access/registration-flow.md
+    - ユーザー管理DB: user-access/user-db.md
+    - 人事連携: user-access/hr-sync.md
+    - アカウント棚卸: user-access/account-audit.md
+    - 管理者権限: user-access/admin-privileges.md
+    - UID/GIDポリシー: user-access/uid-gid-policy.md
+    - アカウントライフサイクル: user-access/account-lifecycle.md
+    - LDAP/AD構成: user-access/ldap-ad.md
+    - 利用ポータル: user-access/portal.md
+  - 計算リソース・ジョブ管理:
+    - compute/index.md
+    - ノードタイプ: compute/node-types.md
+    - 仮想基盤: compute/virtual-infra.md
+    - キュー設計: compute/queue-design.md
+    - ジョブスケジューラ: compute/scheduler.md
+    - コンテナ: compute/container.md
+  - アプリケーション・ライセンス:
+    - applications/index.md
+    - CAEソフトウェア: applications/cae-software.md
+    - ライセンスサーバ: applications/license-server.md
+    - GitHub Server: applications/github-server.md
+  - データ管理・基盤サービス・運用管理:
+    - data-ops/index.md
+    - 共有ストレージ: data-ops/shared-storage.md
+    - ファイル共有: data-ops/nas-gw.md
+    - DNS/NTP: data-ops/dns-ntp.md
+    - 監視: data-ops/monitoring.md
+    - バックアップ: data-ops/backup.md
+    - 課金・統計: data-ops/billing.md
+  - ネットワーク:
+    - network/index.md
+    - 論理構成: network/logical-design.md
+    - VLAN/サブネット: network/vlan-subnet.md
+    - IPアドレス管理: network/ip-management.md
+  - マニュアル: manuals/index.md
+  - FAQ: faq/index.md
+  - 稼働状況: status/index.md
