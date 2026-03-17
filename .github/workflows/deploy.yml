@@ -6,6 +6,7 @@ on:
       - 'docs/**'
       - 'mkdocs.yml'
       - 'requirements.txt'
+  workflow_dispatch:
 
 permissions:
   pages: write
