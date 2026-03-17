@@ -4,7 +4,6 @@ theme:
   name: material
   language: ja
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.path          # パンくずリスト
@@ -12,10 +11,14 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+    - toc.integrate            # TOCを左サイドバーに統合
   palette:
     - scheme: default
       primary: indigo
       accent: indigo
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search:

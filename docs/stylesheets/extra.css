@@ -1,0 +1,18 @@
+/* ABCI 3.0 風レイアウト: コンテンツを左寄せ */
+
+/* 右側TOC非表示時にコンテンツ幅を広げる */
+.md-content {
+  max-width: none;
+}
+
+/* メインコンテンツの右マージンを削減 */
+.md-main__inner {
+  max-width: none;
+}
+
+/* コンテンツエリアを左寄せ */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--secondary {
+    display: none;
+  }
+}
